@@ -1,0 +1,35 @@
+﻿<html ng-app="CustomerModule">
+@{
+    ViewBag.Title = "Index";
+}
+<head title="Customers">
+
+</head>
+
+<body>
+
+    <div ng-controller="CustomersController">
+        <table class="table" id="tbCustomers">
+            <tr>
+                <th>Id</th>
+                <th>CustomerName</th>
+                <th>City</th>
+                <th>Email</th>
+            </tr>
+            <tr ng-repeat="a in Customers">
+                <td>{{a.Id}}</td>
+                <td>{{a.CustomerName}}</td>
+                <td>{{a.City}}</td>
+                <td>{{a.Email}}</td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+</html>
+
+<script src="~/Scripts/angular.js"></script>
+<script src="~/Scripts/angular-route.js"></script>
+<script src="~/Scripts/Angular/Module.js"></script>
+<script src="~/Scripts/Angular/Service.js"></script>
+<script src="~/Scripts/Angular/Controller.js"></script>
